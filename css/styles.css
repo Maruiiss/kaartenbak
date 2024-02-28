@@ -48,17 +48,4 @@ img {
     color: #7f8c8d;
 }
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 20px;
-    background-color: #2c3e50;
-    color: #ecf0f1;
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #ecf0f1;
-    margin-right: 20px;
-}
 
