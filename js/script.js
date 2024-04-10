@@ -33,9 +33,9 @@ function playMusic(divID) {
 
     if (currentlyPlayingAudio && currentlyPlayingAudio.src.includes(audioSrc)) {
         currentlyPlayingAudio.pause();
-        currentlyPlayingAudio.currentTime = 0; // Reset audio to start position
-        currentlyPlayingAudio = null; // Reset currently playing audio
-        videoPlayer.pause(); // Pause video as well
+        currentlyPlayingAudio.currentTime = 0; 
+        currentlyPlayingAudio = null; 
+        videoPlayer.pause();
         return;
     }
 
