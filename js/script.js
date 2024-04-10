@@ -31,6 +31,14 @@ function playMusic(divID) {
     const divNumber = parseInt(divID.replace('rectangle', ''));
     const audioSrc = songs[divNumber - 1];
 
+    if (currentlyPlayingAudio && currentlyPlayingAudio.src.includes(audioSrc)) {
+        currentlyPlayingAudio.pause();
+        currentlyPlayingAudio.currentTime = 0; // Reset audio to start position
+        currentlyPlayingAudio = null; // Reset currently playing audio
+        videoPlayer.pause(); // Pause video as well
+        return;
+    }
+
     if (currentlyPlayingAudio) {
         currentlyPlayingAudio.pause();
     }
@@ -40,7 +48,6 @@ function playMusic(divID) {
 
     currentlyPlayingAudio = audio;
 
- 
     videoPlayer.src = videos[divNumber - 1];
 }
 
